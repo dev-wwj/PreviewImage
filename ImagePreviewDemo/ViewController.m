@@ -7,8 +7,9 @@
 //
 
 #import "ViewController.h"
-
+#import "ImagePreview.h"
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet ImagePreview *imagePreview;
 
 @end
 
@@ -17,6 +18,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    _imagePreview.imageView.image = [UIImage imageNamed:@"PlaceholderCar.png"];
+
 }
 
 - (void)didReceiveMemoryWarning {
